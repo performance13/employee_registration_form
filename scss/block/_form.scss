@@ -39,7 +39,7 @@
       position: absolute;
       top: -4px;
       left: -33px;
-      background-image: url(./image/checkmark-svgrepo-com.svg);
+      background-image: url(../image/checkmark-svgrepo-com.svg);
       background-size: 22px 22px;
       background-color: #fff;
       color: green;
@@ -96,24 +96,24 @@
   margin-top: 5px;
 }
 
-.form__input._error {
-  box-shadow: 0 0 15px red;
-}
+// .form__input._error {
+//   box-shadow: 0 0 15px red;
+// }
 
-.form::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(51, 51, 51, 0.9) url('./image/loading.gif') center / 50px no-repeat;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.5s ease 0s;
-}
+// .form::after {
+//   content: '';
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(51, 51, 51, 0.9) url('./image/loading.gif') center / 50px no-repeat;
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: all 0.5s ease 0s;
+// }
 
-.form._sending::after {
-  opacity: 1;
-  visibility: visible;
-}
+// .form._sending::after {
+//   opacity: 1;
+//   visibility: visible;
+// }
