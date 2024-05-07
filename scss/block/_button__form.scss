@@ -1,0 +1,30 @@
+.button__inner {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.button__menu {
+  display: flex;
+  gap: 25px;
+}
+
+  .button {
+    background-color: skyblue;
+    color: white;
+    min-width: 150px;
+    min-height: 50px;
+    font-size: 24px;
+    border: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+    transition: all 1s;
+    cursor: pointer;
+        
+    &:hover {
+      box-shadow: 0px 2px 20px 5px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+  }

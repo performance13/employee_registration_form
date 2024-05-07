@@ -1,0 +1,86 @@
+.section__menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 24px;
+
+  &-list {
+    display: flex;
+    padding: 0 15px 0 15px;
+    gap: 25px;
+
+    @media screen and (max-width: 768px) {
+      gap: 14px;
+    }
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+    }
+  }
+
+  &-item {
+    display: flex;
+    align-items: stretch;
+    text-align: center;
+
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+    }
+  }
+
+  &-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: skyblue;
+    color: white;
+    border: transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.3);
+    transition: all 1s;
+        
+    &:hover {
+      box-shadow: 0px 2px 20px 5px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: var(--y);
+      left: var(--x);
+      transform: translate(-50%, -50%);
+
+      width: 0px;
+      height: 0px;
+      border-radius: 50%;
+      background-color: #2196f3;
+      transition:
+        width 0.5s,
+        height 0.5s;
+    }
+
+    &:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+      margin: 0 auto;
+    }
+  }
+}
+
+.section__menu-link.current {
+  box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.section__menu.section__menu--page {
+  min-height: 80px;
+  margin-top: 40px;
+  align-items: start
+}

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Form</title>
+  </head>
+
+  <header>
+    <section class="section container">
+      <div class="section__body">
+        <nav class="section__menu section__menu--page">
+          <ul class="section__menu-list">
+            <li class="section__menu-item">
+              <a class="section__menu-link menu-link1" href="/index.html"><span>Home</span></a>
+            </li>
+            <li class="section__menu-item">
+              <a class="section__menu-link menu-link2 current" href="/"><span>Employee Form</span></a>
+            </li>
+            <li class="section__menu-item">
+              <a class="section__menu-link menu-link3" href="/all_employee_form.html"><span>All Employees
+                  Form</span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </header>
+
+  <body>
+    <main class="container">
+      <h1 class="title">Employee Registration</h1>
+      <!-- ! -->
+      <div class="form">
+        <form class="form__employee" id="employee_form" name="employee_form" action="#">
+          <h2 class="visually-hidden">Employee Registration Form</h2>
+
+          <!-- 1 Basic Information -->
+          <fieldset>
+            <legend>Basic Information</legend>
+
+            <div class="name__wrapper">
+              <legend class="visually-hidden">First Name</legend>
+              <div class="wrapper__box">
+                <label class="form__label" for="first_name">First Name*</label>
+                <input class="form__input" 
+                  id="first_name" 
+                  name="employee_first_name" value="" type="text"
+                  inputmode="text"
+                  autocomplete="off" minlength="2" maxlength="50" 
+                  placeholder="First name"
+                  data-required="^[a-zA-Z]+\w+$">
+                  
+                  
+              </div>
+              <div class="wrapper__box">
+                <legend class="visually-hidden">Middle Name</legend>
+                <label class="form__label" for="middle_name">Middle Name*</label>
+                <input class="form__input" 
+                  id="middle_name" 
+                  name="employee_middle_name" value="" type="text"
+                  inputmode="text" autocomplete="off" minlength="2" maxlength="50" 
+                  placeholder="Middle name"
+                  data-required="^[a-zA-Z]+\w+$">
+              </div>
+              <div class="wrapper__box">
+                <legend class="visually-hidden">Last Name</legend>
+                <label class="form__label" for="last_name">Last Name*</label>
+                <input class="form__input" 
+                  id="last_name" 
+                  name="employee_last_name" value="" type="text"
+                  inputmode="text"
+                  autocomplete="off" minlength="2" maxlength="50" 
+                  placeholder="Last name"
+                  data-required="^[a-zA-Z]+\w+$">
+              </div>
+            </div>
+
+            <div class="radio">
+              <legend class="radio__legend">Sex*</legend>
+
+              <div class="radio__wrapper">
+                <input class="radio__input" id="fimale" name="employee_sex" value="fimale" type="radio" required>
+                <label class="radio__label" for="fimale">Fimale</label>
+
+                <input class="radio__input" id="male" name="employee_sex" value="male" type="radio" required>
+                <label class="radio__label" for="male">Male</label>
+              </div>
+            </div>
+
+            <legend class="visually-hidden">Phone</legend>
+            <div class="wrapper__box">
+              <label class="form__label" for="phone">Phone*</label>
+              <input class="form__input _phone" 
+                id="phone" 
+                name="phone" value="" type="tel"
+                inputmode="tel"
+                autocomplete="off"
+                data-required="^[0-9]{10}$">
+                </div>
+
+              <legend class="visually-hidden">Email</legend>
+              <div class="wrapper__box">
+                <label class="form__label" for="email">Email*</label>
+                <input class="form__input _email" 
+                  id="email" 
+                  name="email" value="" type="tel"
+                  inputmode="tel"
+                  autocomplete="off"
+                  data-required="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$">
+              </div>
+
+          </fieldset>
+
+          <!-- 2 Work Information -->
+          <fieldset>
+            <legend>Work Information</legend>
+
+            <legend class="visually-hidden">Company</legend>
+            <label class="form__label" for="company">Company*</label>
+            <input class="form__input" id="company" name="employee_company" value="" type="text"    inputmode="text"
+              minlength="2" maxlength="50"
+              autocomplete="on"
+              data-required="^[a-zA-Z]+\w+$">
+
+            <div class="row">
+              <div class="radio">
+                <legend>Position*</legend>
+                <div class="radio__wrapper">
+                  <input class="radio__input" id="position_1" name="employee_position" value="position 1"
+                    type="radio" required>
+                  <label class="radio__label" for="position_1">position 1</label>
+
+                  <input class="radio__input" id="position_2" name="employee_position" value="position 2"
+                    type="radio" required>
+                  <label class="radio__label" for="position_2">position 2</label>
+
+                  <input class="radio__input" id="position_3" name="employee_position" value="position 3"
+                    type="radio" required>
+                  <label class="radio__label" for="position_3">position 3</label>
+                </div>
+              </div>
+
+              <div class="radio">
+                <legend>Work Shift*</legend>
+                <div class="radio__wrapper">
+                  <input class="radio__input" id="work_shift_1" name="employee_work_shift" value="1" type="radio" required>
+                  <label class="radio__label" for="work_shift_1">1</label>
+
+                  <input class="radio__input" id="work_shift_2" name="employee_work_shift" value="2" type="radio" required>
+                  <label class="radio__label" for="work_shift_2">2</label>
+                </div>
+              </div>
+            </div>
+
+            <legend class="visually-hidden">Term of Work</legend>
+            <div class="row">
+              <div class="start_of_work column">
+                <label for="start_of_work">Start of Work*</label>
+                <input class="" id="start_of_work" name="employee_start_of_work" value="" type="date"
+                  min="1950-01-01"
+                  max="2050-12-31"
+                  required>
+              </div>
+              <div class="finish_of_work column">
+                <label for="finish_of_work">Finish of Work*</label>
+                <input class="" id="finish_of_work" name="employee_finish_of_work" value="" type="date"
+                  min="1950-01-01"
+                  max="2050-12-31"
+                  required>
+              </div>
+            </div>
+
+            <legend class="visually-hidden">Disease</legend>
+            <div class="textarea column">
+              <label for="disease">Disease</label>
+              <textarea class="textarea__input" id="disease" name="employee_disease" inputmode="text" maxlength="300"
+                rows="6" cols="60"
+                contenteditable="true"></textarea>
+            </div>
+
+          </fieldset>
+
+          <!-- 3 Personal Information -->
+          <fieldset>
+            <legend>Personal Information</legend>
+            <legend class="visually-hidden">Date of Birth</legend>
+
+            <div class="date_of_birth">
+              <label for="date_of_birth">Date of Birth*</label>
+              <input class="date_of_birth__input" id="date_of_birth" name="employee_date_of_birth" value=""
+                type="date" 
+                min="1950-01-01"
+                max="2024-12-31"
+                required>
+            </div>
+            <div class="row">
+              <div class="radio">
+                <legend>Merital Status*</legend>
+                <div class="radio__wrapper">
+                  <input class="radio__input" id="Married" name="employee_merital_status" value="married"
+                    type="radio" required>
+                  <label class="radio__label" for="Married">Married</label>
+
+                  <input class="radio__input" id="Single" name="employee_merital_status" value="single"
+                    type="radio" required>
+                  <label class="radio__label" for="Single">Single</label>
+                </div>
+              </div>
+
+              <div class="radio">
+                <legend>Children*</legend>
+                <div class="radio__wrapper">
+
+                  <input class="radio__input" id="children_0" name="employee_children" value="0" type="radio" required>
+                  <label class="radio__label" for="children_0">0</label>
+
+                  <input class="radio__input" id="children_1" name="employee_children" value="1" type="radio" required>
+                  <label class="radio__label" for="children_1">1</label>
+
+                  <input class="radio__input" id="children_2" name="employee_children" value="2" type="radio" required>
+                  <label class="radio__label" for="children_2">2</label>
+
+                  <input class="radio__input" id="children_3" name="employee_children" value="3" type="radio" required>
+                  <label class="radio__label" for="children_3">3</label>
+
+                  <input class="radio__input" id="children_4" name="employee_children" value="4" type="radio" required>
+                  <label class="radio__label" for="children_4">4</label>
+
+                  <input class="radio__input" id="children_5" name="employee_children" value="5" type="radio" required>
+                  <label class="radio__label" for="children_5">5</label>
+                </div>
+              </div>
+            </div>
+
+            <legend class="visually-hidden">Address</legend>
+            <div class="textarea column">
+              <label class="address__label" for="address">Address*</label>
+
+              <textarea class="textarea__input address__input" id="address" name="employee_address" autocomplete="off"
+                minlength="2"
+                maxlength="200" rows="5" cols="50"
+                spellcheck="false"
+                required></textarea>
+            </div>
+          </fieldset>
+
+          <!-- Additional Information -->
+          <fieldset>
+            <legend>Additional Information</legend>
+            <legend class="visually-hidden">Comment</legend>
+            <div class="textarea column">
+              <label for="comment">Comment</label>
+              <textarea class="textarea__input" id="comment" name="employee_comment" inputmode="text" maxlength="500"
+                rows="11" cols="50"
+                spellcheck="true"></textarea>
+            </div>
+          </fieldset>
+
+
+          <div class="button__inner">
+            <nav class="button__inner button__menu">
+              <button class="button" 
+              id="submit" 
+              name="submit" 
+              type="submit">Submit</button>
+              <button class="button" type="reset">Reject</button>
+            </nav>
+          </div>
+
+        </form>
+      </div>
+      <!-- !! -->
+
+    </main>
+
+    <!-- <script defer src="./js/radio.js"></script> -->
+    <script defer src="./js/form.js"></script>
+    <script defer src="./js/hover.js"></script>
+  </body>
+
+</html>
